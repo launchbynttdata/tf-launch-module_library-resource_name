@@ -1,4 +1,4 @@
-module github.com/nexient-llc/tf-module-resource_name
+module github.com/launchbynttdata/tf-launch-module_library-resource_name
 
 go 1.20
 
