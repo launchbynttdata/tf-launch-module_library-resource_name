@@ -35,6 +35,12 @@ locals {
     northcentralus = "ncus"
     southcentralus = "scus"
     westcentralus  = "wcus"
+    usgovvirginia  = "govva"
+    usgovtexas     = "govtx"
+    usgovarizona   = "govaz"
+    usgoviowa      = "goviowa"
+    usdodcentral   = "dodc"
+    usdodeast      = "dode"
   }
 
 
