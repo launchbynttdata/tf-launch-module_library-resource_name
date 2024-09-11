@@ -126,8 +126,8 @@ locals {
   length_of_camel_case_without_any_separators = length(local.camel_case_without_any_separators)
 
   # if length(local.standard) < var.maximum_length -> output: local.standard
-  # else if length(local.camel_case_without_any_separators) < var.maximum_length -> output: local.camel_case_without_any_separators
+  # else if length(local.lower_case_without_any_separators) < var.maximum_length -> output: local.lower_case_without_any_separators
   # else -> output: local.minimal_without_any_separators
-  recommended_per_length_restriction = length(local.standard) > var.maximum_length ? local.length_of_camel_case_without_any_separators > var.maximum_length ? local.minimal_without_any_separators : local.camel_case_without_any_separators : local.standard
+  recommended_per_length_restriction = length(local.standard) > var.maximum_length ? length(local.lower_case_without_any_separators) > var.maximum_length ? local.minimal_without_any_separators : local.lower_case_without_any_separators : local.standard
 
 }
