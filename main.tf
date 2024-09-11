@@ -25,7 +25,6 @@ locals {
   instance_resource = format("%03d", var.instance_resource)
   instance_env      = format("%03d", var.instance_env)
 
-
   azure_region_abbr_map = {
     eastus         = "eus"
     westus         = "wus"
@@ -42,7 +41,6 @@ locals {
     usdodcentral   = "dodc"
     usdodeast      = "dode"
   }
-
 
   variable_list = [
     local.logical_product_family,
@@ -66,8 +64,6 @@ locals {
     local.logical_product_service,
     random_integer.random_number.id
   ]
-
-
 }
 
 locals {
@@ -120,14 +116,9 @@ locals {
   camel_case                        = join("", local.variable_list_in_camel_case)
   camel_case_without_any_separators = replace(local.camel_case, "/[-_.]{1}/", "")
   camel_case_with_separator         = join(var.separator, local.variable_list_in_camel_case)
-}
-
-locals {
-  length_of_camel_case_without_any_separators = length(local.camel_case_without_any_separators)
 
   # if length(local.standard) < var.maximum_length -> output: local.standard
-  # else if length(local.camel_case_without_any_separators) < var.maximum_length -> output: local.camel_case_without_any_separators
+  # else if length(local.lower_case_without_any_separators) < var.maximum_length -> output: local.lower_case_without_any_separators
   # else -> output: local.minimal_without_any_separators
-  recommended_per_length_restriction = length(local.standard) > var.maximum_length ? local.length_of_camel_case_without_any_separators > var.maximum_length ? local.minimal_without_any_separators : local.camel_case_without_any_separators : local.standard
-
+  recommended_per_length_restriction = length(local.standard) > var.maximum_length ? length(local.lower_case_without_any_separators) > var.maximum_length ? local.minimal_without_any_separators : local.lower_case_without_any_separators : local.standard
 }

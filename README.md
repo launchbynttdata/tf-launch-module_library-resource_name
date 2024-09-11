@@ -5,7 +5,8 @@
 
 ## Overview
 
-This module generates the name of cloud resources in different formats as specified below. For the product_family `demo_org`, product_service `test_backend`, environment `dev` and cloud resource `acr`
+This module generates the name of cloud resources in different formats as specified below. For the product_family `demo_org`,
+product_service `test_backend`, environment `dev` and cloud resource `acr` with a default maximum_length `60`
 ```
 # Outputs
 camel_case = "Demo_orgTest_backendUseast2Dev000Acr000"
@@ -23,6 +24,31 @@ standard = "demo_org-test_backend-useast2-dev-000-acr-000"
 upper_case = "DEMO_ORGTEST_BACKENDUSEAST2DEV000ACR000"
 upper_case_with_separator = "DEMO_ORG-TEST_BACKEND-USEAST2-DEV-000-ACR-000"
 upper_case_without_any_separators = "DEMOORGTESTBACKENDUSEAST2DEV000ACR000"
+
+```
+
+The same output with a maximum_length of `32` generates below.
+
+Observe the value of `recommended_per_length_restriction`
+
+```
+camel_case = "DemoBackendEus2Dev001Acr000"
+camel_case_with_separator = "Demo-Backend-Eus2-Dev-001-Acr-000"
+camel_case_without_any_separators = "DemoBackendEus2Dev001Acr000"
+dns_compliant_minimal = "demo-backend-dev-001-acr"
+dns_compliant_minimal_random_suffix = "demo-backend-9003923140"
+dns_compliant_standard = "demo-backend-eus2-dev-001-acr-000"
+lower_case = "demobackendeus2dev001acr000"
+lower_case_with_separator = "demo-backend-eus2-dev-001-acr-000"
+lower_case_without_any_separators = "demobackendeus2dev001acr000"
+minimal = "demo-backend-dev-001-acr"
+minimal_random_suffix = "demo-backend-9003923140"
+minimal_random_suffix_without_any_separators = "demobackend9003923140"
+recommended_per_length_restriction = "demobackendeus2dev001acr000"
+standard = "demo-backend-eus2-dev-001-acr-000"
+upper_case = "DEMOBACKENDEUS2DEV001ACR000"
+upper_case_with_separator = "DEMO-BACKEND-EUS2-DEV-001-ACR-000"
+upper_case_without_any_separators = "DEMOBACKENDEUS2DEV001ACR000"
 
 ```
 
