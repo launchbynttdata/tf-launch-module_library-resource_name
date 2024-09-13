@@ -40,18 +40,6 @@ variable "logical_product_service" {
   }
 }
 
-variable "create_cloudwatch_log_stream" {
-  description = "Flag to indicte if AWS cloudwatch log stream needs to be created."
-  type        = bool
-  default     = false
-}
-
-variable "create_cloudwatch_log_subscription_filter" {
-  description = "Flag to indicte if  AWS cloudwatch log subscription filter needs to be created."
-  type        = bool
-  default     = false
-}
-
 variable "instance_resource" {
   type        = number
   description = "Number that represents the instance of the resource."
@@ -110,22 +98,4 @@ variable "region" {
     condition     = length(regexall("\\b \\b", var.region)) == 0
     error_message = "Spaces between the words are not allowed."
   }
-}
-
-variable "environment" {
-  description = "Environment in which the resource should be provisioned like dev, qa, prod etc."
-  type        = string
-  default     = "dev"
-}
-
-variable "environment_number" {
-  description = "The environment count for the respective environment. Defaults to 000. Increments in value of 1"
-  type        = string
-  default     = "000"
-}
-
-variable "resource_number" {
-  description = "The resource count for the respective resource. Defaults to 000. Increments in value of 1"
-  type        = string
-  default     = "000"
 }
