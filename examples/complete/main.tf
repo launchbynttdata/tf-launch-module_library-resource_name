@@ -24,8 +24,7 @@
 // limitations under the License.
 
 module "resource_names" {
-  source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
-  version = "~> 1.0"
+  source  = "../.."
 
   for_each = var.resource_names_map
 
