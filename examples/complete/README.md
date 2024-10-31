@@ -15,7 +15,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | terraform.registry.launch.nttdata.com/module_library/resource_name/launch | ~> 1.0 |
+| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | ../.. | n/a |
 
 ## Resources
 

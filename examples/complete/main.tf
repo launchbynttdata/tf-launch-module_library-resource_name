@@ -24,7 +24,7 @@
 // limitations under the License.
 
 module "resource_names" {
-  source  = "../.."
+  source = "../.."
 
   for_each = var.resource_names_map
 
