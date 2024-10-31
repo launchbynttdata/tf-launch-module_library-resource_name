@@ -62,7 +62,7 @@ locals {
     southcentralus     = "scus"
     southeastasia      = "sea"
     spaincentral       = "esc"
-    swedencentral      = "swc"
+    swedencentral      = "sec"
     switzerlandnorth   = "chn"
     switzerlandwest    = "chw"
     uaecentral         = "aec"
