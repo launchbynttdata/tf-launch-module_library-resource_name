@@ -90,7 +90,17 @@ output "resource_one_recommended_per_length_restriction" {
   description = "Resource one in recommended format as per length restriction."
 }
 
+output "resource_one_random_integer" {
+  value       = module.resource_names["resource_one"].random_integer
+  description = "Resource one's random number used to suffix resources"
+}
+
 output "resource_two_recommended_per_length_restriction" {
   value       = module.resource_names["resource_two"].recommended_per_length_restriction
   description = "Resource two in recommended format as per length restriction."
+}
+
+output "resource_two_random_integer" {
+  value       = module.resource_names["resource_two"].random_integer
+  description = "Resource two's random number used to suffix resources"
 }

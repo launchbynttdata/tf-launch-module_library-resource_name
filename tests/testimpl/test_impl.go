@@ -27,8 +27,10 @@ func TestNames(t *testing.T, ctx types.TestContext) {
 		"resource_one_standard":                                     "terratest-resource_name_test-useast2-dev-000-r1-000$",
 		"resource_one_uppercase":                                    "TERRATEST-RESOURCE_NAME_TEST-USEAST2-DEV-000-R1-000$",
 		"resource_one_uppercase_without_any_separators":             "TERRATESTRESOURCENAMETESTUSEAST2DEV000R1000$",
-		"resource_two_recommended_per_length_restriction":           "TerratestResourceNAMEtestUseast2Dev000R2000$",
+		"resource_one_random_integer": 							     "^[0-9]{10}$",
+		"resource_two_recommended_per_length_restriction":           "terratestresourcenametestuseast2dev000r2000$",
 		"resource_two_standard":                                     "terratest-resource_name_test-useast2-dev-000-r2-000$",
+		"resource_two_random_integer": 							     "^[0-9]{10}$",
 	}
 
 	t.Run("TestCheckNames", func(t *testing.T) {
