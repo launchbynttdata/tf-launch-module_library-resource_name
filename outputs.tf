@@ -99,3 +99,8 @@ output "dns_compliant_minimal_random_suffix" {
   value       = local.dns_compliant_minimal_random_suffix
   description = "Name is minimal_random_suffix and DNS complaint, that is it can contain only -."
 }
+
+output "random_integer" {
+  value       = random_integer.random_number.id
+  description = "Random number used to suffix resources"
+}

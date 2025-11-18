@@ -1,4 +1,4 @@
-# tf_module_resource_name
+# tf-launch-module_library-resource_name
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
@@ -24,7 +24,7 @@ standard = "demo_org-test_backend-useast2-dev-000-acr-000"
 upper_case = "DEMO_ORGTEST_BACKENDUSEAST2DEV000ACR000"
 upper_case_with_separator = "DEMO_ORG-TEST_BACKEND-USEAST2-DEV-000-ACR-000"
 upper_case_without_any_separators = "DEMOORGTESTBACKENDUSEAST2DEV000ACR000"
-
+random_integer = 9349499394
 ```
 
 The same output with a maximum_length of `32` generates below.
@@ -49,7 +49,7 @@ standard = "demo-backend-eus2-dev-001-acr-000"
 upper_case = "DEMOBACKENDEUS2DEV001ACR000"
 upper_case_with_separator = "DEMO-BACKEND-EUS2-DEV-001-ACR-000"
 upper_case_without_any_separators = "DEMOBACKENDEUS2DEV001ACR000"
-
+random_integer = 9003923140
 ```
 
 ## Pre-Commit hooks
